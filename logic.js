@@ -13,6 +13,10 @@ let msg = "";
 
 let sum = card1 + card2;
 
+const button = document.getElementById('start')
+const cardA = document.getElementById('card1')
+const cardB = document.getElementById('card2')
+
 function gameLogic(add){
     if (add === 21){
         won = true;
@@ -25,9 +29,15 @@ function gameLogic(add){
     else{
         msg = "Want another Card?";
     }
-}
-gameLogic(sum)
 
-print(`Card1 = ${card1} \nCard2 = ${card2} 
-        \nGame state: \nAlive = ${alive} \nWon = ${won}
-        \n${msg}`);
+    cardA.textContent = "Card 1: " + card1;
+    cardB.textContent = "Card 2: " + card2;
+}
+
+
+
+
+button.addEventListener('mousedown', function roll(){
+    gameLogic(sum);
+    alert("yeah")
+})
