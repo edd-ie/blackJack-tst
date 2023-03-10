@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css?family=Varela%20Round');
+
+*{
+    font-family: 'Varela Round';
+    font-size:40px;
+}
+
+body{
+    display: block;
+    background: url('./images/green.jpg')
+}
+
+div{
+    margin-top: 130px;
+    text-align: center;
+    text-justify: center;
+    font-size:100px;
+}
+
+h1{
+    color: goldenrod;
+}
+
+h2#play{
+
+}
+div #start{
+    border-radius: 12px;
+    width: 160px;
+    height: 65px;
+}
+
