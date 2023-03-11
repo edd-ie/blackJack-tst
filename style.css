@@ -19,14 +19,22 @@ div{
 
 h1{
     color: goldenrod;
+    font-size:60px;
 }
 
-h2#play{
+button{
+    background: goldenrod;
 
 }
 div #start{
     border-radius: 12px;
     width: 160px;
     height: 65px;
+}
+p > span#four{
+    font-weight:bolder;
+}
+span{
+    color: white;
 }
 

@@ -5,39 +5,46 @@ function print(val){
     console.log(val);
 }
 
-let card1 = Math.floor(randomNumber(2,11));
-let card2 = Math.floor(randomNumber(2,11));
-let won = false;
-let alive = true; 
-let msg = "";
 
-let sum = card1 + card2;
 
 const button = document.getElementById('start')
-const cardA = document.getElementById('card1')
-const cardB = document.getElementById('card2')
+const cardA = document.getElementById('one')
+const cardB = document.getElementById('two')
+const out = document.getElementById('three');
+const results = document.getElementById('four');
 
-function gameLogic(add){
-    if (add === 21){
+function gameLogic(){
+    let card1 = Math.floor(randomNumber(2,11));
+    let card2 = Math.floor(randomNumber(2,11));
+    let sum = card1 + card2;
+    let won = false;
+    let alive = true; 
+    let msg = "";
+    if (sum === 21){
+        results.style.color = 'red';
         won = true;
         msg = "BlackJack!!";
     }
-    else if(add > 21){
+    else if(sum > 21){
+        results.style.color = 'red';
         alive = false;
         msg = "Game Over!";
     }
     else{
-        msg = "Want another Card?";
+        results.style.color = 'white';
+        msg = "Play another Card!";
     }
 
-    cardA.textContent = "Card 1: " + card1;
-    cardB.textContent = "Card 2: " + card2;
-}
+    cardA.textContent = card1;
+    cardB.textContent = card2;
+    out.textContent = sum;
+    results.textContent = msg;
+};
 
 
 
 
 button.addEventListener('mousedown', function roll(){
-    gameLogic(sum);
-    alert("yeah")
+    gameLogic();
+    // alert("yeah")
 })
