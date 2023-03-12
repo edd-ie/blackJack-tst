@@ -24,11 +24,13 @@ function gameLogic(){
         results.style.color = 'gold';
         won = true;
         msg = "BlackJack!!";
+	alert("You Won!");
     }
     else if(sum > 21){
         results.style.color = 'red';
         alive = false;
         msg = "Game Over!";
+	alert("You lost!");
     }
     else{
         results.style.color = 'white';
