@@ -14,14 +14,14 @@ const out = document.getElementById('three');
 const results = document.getElementById('four');
 
 function gameLogic(){
-    let card1 = Math.floor(randomNumber(2,11));
-    let card2 = Math.floor(randomNumber(2,11));
+    let card1 = Math.floor(randomNumber(2,12));
+    let card2 = Math.floor(randomNumber(2,12));
     let sum = card1 + card2;
     let won = false;
     let alive = true; 
     let msg = "";
     if (sum === 21){
-        results.style.color = 'red';
+        results.style.color = 'gold';
         won = true;
         msg = "BlackJack!!";
     }
